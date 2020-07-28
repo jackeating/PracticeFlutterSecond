@@ -41,18 +41,21 @@ class _NewTransactionState extends State<NewTransaction> {
                   decoration: InputDecoration(labelText: 'Title'),
                   controller: titleController,
                   onSubmitted: (_) => submitData(),
-                  // onChanged: (val) {
-                  //   titleInput = val;
-                  // },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Amount'),
                   controller: amountController,
                   keyboardType: TextInputType.number,
                   onSubmitted: (_) => submitData(),
-                  // onChanged: (val) {
-                  //   amountInput = val;
-                  // },
+                ),
+                Row(
+                  children: <Widget>[
+                    Text('No date chosen!'),
+                    FlatButton(
+                      child: Text('chose Date'),
+                      onPressed: () {},
+                    )
+                  ],
                 ),
                 FlatButton(
                   child: Text('Add Transaction'),
